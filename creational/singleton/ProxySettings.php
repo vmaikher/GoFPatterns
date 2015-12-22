@@ -1,6 +1,8 @@
 <?php
-final class Singleton {
+final class ProxySettings {
   private static $instance;
+  private $proxySettings;
+
   private function __construct() {
   }
 
@@ -19,5 +21,13 @@ final class Singleton {
   private function __wakeup() {
     throw new Exception("You try unserialize a Singleton. Singleton's unserializing is forbidden");
   }
-}
+
+  public function getProxySettings() {
+    if(null === $this->proxySettings) {
+      require_once('settings.php');
+      $this->proxySettings = $proxy_settings;
+    }
+
+    return $this->proxySettings;
+  }
 }
