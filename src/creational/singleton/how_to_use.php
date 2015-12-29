@@ -1,5 +1,8 @@
 <?php
-require_once('ProxySettings.php');
+
+namespace patterns\creational\singleton;
+
+use patterns\creational\singleton\ProxySettings;
 
 $proxy_config_object = ProxySettings::getInstance();
 var_dump($proxy_config_object->getProxySettings());

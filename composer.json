@@ -1,0 +1,18 @@
+{
+    "name": "vmaikher/gof-patterns-php",
+    "description": "examples of GoF Patterns implementation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Volodymyr Maikher",
+            "email": "volodymyr.maikher@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "patterns\\": "src/"
+        }
+    },
+    "require": {}
+}

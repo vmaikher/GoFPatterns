@@ -1,4 +1,6 @@
 <?php
+namespace patterns\creational\singleton;
+
 final class ProxySettings
 {
     private static $instance;
@@ -17,14 +19,14 @@ final class ProxySettings
         return static::$instance;
     }
 
-    private function __clone()
+    public function __clone()
     {
-        throw new Exception("You try clone a Singleton. Singleton's cloning is forbidden");
+        throw new \Exception("You try clone a Singleton. Singleton's cloning is forbidden");
     }
 
-    private function __wakeup()
+    public function __wakeup()
     {
-        throw new Exception("You try unserialize a Singleton. Singleton's unserializing is forbidden");
+        throw new \Exception("You try unserialize a Singleton. Singleton's unserializing is forbidden");
     }
 
     public function getProxySettings()
