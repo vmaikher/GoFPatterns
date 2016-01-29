@@ -5,7 +5,8 @@ use patterns\creational\factoryMethod\drivers\MysqlDriver;
 
 class MysqlDriverCreator extends DriverCreator
 {
-    public function getDriver(){
+    public function getDriver()
+    {
         return new MysqlDriver();
     }
 }

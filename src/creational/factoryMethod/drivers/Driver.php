@@ -17,12 +17,14 @@ abstract class Driver
 
     public function update($table, array $fields, array $values)
     {
-        echo "$this->type:Update fields: " . implode(', ', $fields). " from $table " . " with values:" . implode(' ', $values) . PHP_EOL;
+        echo "$this->type:Update fields: " . implode(', ', $fields) . " from $table " .
+            " with values:" . implode(' ', $values) . PHP_EOL;
     }
 
     public function insert($table, array $fields, array $values)
     {
-        echo "$this->type:Insert values: " . implode(', ', $values) . " into fields:" . implode(' ', $fields). " from $table" . PHP_EOL;
+        echo "$this->type:Insert values: " . implode(', ', $values) . " into fields:" . implode(' ', $fields) .
+            " from $table" . PHP_EOL;
     }
 
     public function addCondition($field, $value)

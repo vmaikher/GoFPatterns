@@ -5,7 +5,8 @@ use patterns\creational\factoryMethod\drivers\MariadbDriver;
 
 class MariadbDriverCreator extends DriverCreator
 {
-    public function getDriver(){
+    public function getDriver()
+    {
         return new MariadbDriver();
     }
 }
