@@ -1,6 +1,6 @@
 <?php
 
-namespace patterns\structural\Proxy;
+namespace patterns\structural\proxy;
 
 class Api implements ApiInterface
 {
