@@ -13,18 +13,28 @@ abstract class State
         $this->petition = $petition;
     }
 
-    public function changeSubject()
+    public function changeSubject($subject)
     {
-        echo "operation: change subject is not allowed";
+        echo "operation: change subject is not allowed".PHP_EOL;
     }
 
-    public function Publish()
+    public function addVote()
     {
-        echo "operation: do published is not allowed";
+        echo "operation: add vote is not allowed".PHP_EOL;
     }
 
-    public function Cancel()
+    public function publish()
     {
-        echo "operation: do published is not allowed";
+        echo "operation: published is not allowed".PHP_EOL;
+    }
+
+    public function expire()
+    {
+        echo "operation: expire is not allowed".PHP_EOL;
+    }
+
+    public function cancel()
+    {
+        $this->petition->setState(new Cancelled($this->petition));
     }
 }

@@ -15,7 +15,6 @@ class Petition
     public function __construct($subject)
     {
         $this->subject = $subject;
-
         $this->state = new Registered($this);
     }
 
@@ -64,31 +63,10 @@ class Petition
         $this->publishedAt = $publishedAt;
     }
 
-    /**
-     * @param State $state
-     */
+
+
     public function setState(State $state)
     {
         $this->state = $state;
-    }
-
-    public function addVote()
-    {
-        $this->state->addVote();
-    }
-
-    public function publish()
-    {
-        $this->state->publish();
-    }
-
-    public function expire()
-    {
-        $this->state->expire();
-    }
-
-    public function cancel()
-    {
-        $this->state->cancel();
     }
 }
