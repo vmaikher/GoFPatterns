@@ -1,7 +1,7 @@
 <?php
 
-use patterns\structural\Proxy\ApiProtectionProxy;
-use patterns\structural\Proxy\User;
+use patterns\structural\proxy\ApiProtectionProxy;
+use patterns\structural\proxy\User;
 
 $user = new User('mark', 'pass', 'user');
 $admin = new User('adam', 'pass', 'admin');
